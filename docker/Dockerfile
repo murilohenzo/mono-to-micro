@@ -9,4 +9,4 @@ ENV SPRING_PROFILES_ACTIVE="local"
 
 EXPOSE 8080
 
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/deployment/*.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar /app/deployment/*.jar"]
