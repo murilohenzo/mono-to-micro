@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  database:
+    container_name: mysql_db
+    restart: always
+    ports:
+      - "3306:3306"
+    build:
+      context: ..
+    image: murilohenzo/mysql_db

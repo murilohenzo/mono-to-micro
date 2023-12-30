@@ -1,0 +1,11 @@
+FROM mysql:latest
+
+RUN chown -R mysql:root /var/lib/mysql/
+
+ENV MYSQL_DATABASE=travel
+ENV MYSQL_USER=mysql
+ENV MYSQL_PASSWORD=mysql
+ENV MYSQL_ROOT_PASSWORD=mysql
+ENV MYSQL_PORT=3306
+
+EXPOSE 3306
