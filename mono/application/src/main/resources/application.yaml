@@ -8,15 +8,22 @@ spring:
   jpa:
     show-sql: false
     open-in-view: false
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
     properties:
+      jdbc:
+        lob:
+          non_contextual_creation:true
       hibernate:
-        format-sql: false
-    database-platform: org.hibernate.dialect.H2Dialect
+        generate-ddl: true
+        format-sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
-    url: ${DATASOURCE_URL}
-    username: ${DATASOURCE_USERNAME}
-    password: ${DATASOURCE_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/travelapp?useTimezone=true&serverTimezone=America/Sao_Paulo
+    username: root
+    password: mysql
+    driverClassName: com.mysql.cj.jdbc.Driver
 server:
   port: 8080
   servlet:
