@@ -1,4 +1,4 @@
-package com.murilohenzo.ordermanagement.adapters.representation;
+package com.murilohenzo.ordermanagement.representation;
 
 import com.murilohenzo.flightbooking.domain.entity.Flight;
 import com.murilohenzo.hotelbooking.domain.entity.Hotel;

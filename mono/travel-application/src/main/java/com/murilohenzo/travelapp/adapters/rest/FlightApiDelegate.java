@@ -1,4 +1,4 @@
-package com.murilohenzo.flightbooking.adapters.rest;
+package com.murilohenzo.travelapp.adapters.rest;
 
 import com.murilohenzo.flightbooking.domain.entity.Flight;
 import com.murilohenzo.flightbooking.domain.service.FlightService;

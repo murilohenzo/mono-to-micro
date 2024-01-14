@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>application</artifactId>
+    <artifactId>travel-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -16,6 +16,12 @@
     </properties>
 
     <dependencies>
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- Dependências dos módulos de domínio -->
         <dependency>
             <groupId>com.murilohenzo</groupId>

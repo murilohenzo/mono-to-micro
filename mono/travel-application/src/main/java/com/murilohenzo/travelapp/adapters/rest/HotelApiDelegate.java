@@ -1,4 +1,4 @@
-package com.murilohenzo.hotelbooking.adapters.rest;
+package com.murilohenzo.travelapp.adapters.rest;
 
 import com.murilohenzo.hotelbooking.domain.entity.Hotel;
 import com.murilohenzo.hotelbooking.domain.service.HotelService;

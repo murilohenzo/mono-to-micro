@@ -11,16 +11,15 @@ Este repositório contém um componente Spring Boot modularizado, seguindo uma a
 
 ```
 ├── modules
+│   ├── travel-application
+│   │   └── adapters
 │   ├── flight
-│   │   ├── adapters
 │   │   ├── domain
 │   │   └── infrastructure
 │   ├── hotel
-│   │   ├── adapters
 │   │   ├── domain
 │   │   └── infrastructure
 │   └── order
-│       ├── adapters
 │       ├── domain
 │       └── infrastructure
 ```
@@ -69,3 +68,6 @@ Em resumo, a combinação de um monólito modularizado com a arquitetura hexagon
    ```bash
    mvn spring-boot:run
    ```
+   
+## Referência
+1. [Modular Monolith](https://www.kamilgrzybek.com/blog/series/modular-monolith)
