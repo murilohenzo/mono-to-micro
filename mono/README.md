@@ -5,6 +5,10 @@ Este repositório contém um componente Spring Boot modularizado, seguindo uma a
 
 ## Estrutura do Projeto
 
+<p align="center">
+    <img width="200" src="https://github.com/murilohenzo/mono-to-micro/assets/28688721/4a7fabb2-349b-466b-99b4-b1aa27e97ea8" alt="monolitico_modular">
+</p>
+
 ```
 ├── modules
 │   ├── flight
