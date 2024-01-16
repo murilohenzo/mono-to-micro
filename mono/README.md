@@ -70,4 +70,6 @@ Em resumo, a combinação de um monólito modularizado com a arquitetura hexagon
    ```
    
 ## Referência
-1. [Modular Monolith](https://www.kamilgrzybek.com/blog/series/modular-monolith)
+1. [Monolith Decomposition Patterns](https://www.infoq.com/presentations/microservices-principles-patterns/)
+2. [Modular Monolith](https://www.kamilgrzybek.com/blog/series/modular-monolith)
+3. [Hexagonal Architecture](https://www.baeldung.com/hexagonal-architecture-ddd-spring)
