@@ -15,4 +15,4 @@ spring:
       hibernate:
         ddl-auto: true
         format-sql: false
-    database-platform: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.H2Dialect
