@@ -6,6 +6,3 @@ services:
     restart: always
     ports:
       - "3306:3306"
-    build:
-      dockerfile: Dockerfile
-    image: murilohenzo/mysql_db

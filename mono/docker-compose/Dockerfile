@@ -1,7 +1,4 @@
-FROM mysql:latest
-
-#COPY ./docker-entrypoint.sh /docker-entrypoint.sh
-#COPY ./init.sql /docker-entrypoint-initdb.d/
+FROM mysql:8-debian
 
 ENV MYSQL_DATABASE=travelapp
 ENV MYSQL_USER=mysql
@@ -9,6 +6,6 @@ ENV MYSQL_PASSWORD=mysql
 ENV MYSQL_ROOT_PASSWORD=mysql
 ENV MYSQL_PORT=3306
 
-#ENTRYPOINT ["/docker-entrypoint.sh"]
+VOLUME ["./data:/var/lib/mysql"]
 
 EXPOSE 3306
