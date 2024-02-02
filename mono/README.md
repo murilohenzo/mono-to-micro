@@ -1,4 +1,4 @@
-# Componente Spring Boot Monolitíco para Microserviço
+# Componente Spring Boot Monolitíco Modular
 
 ## 1 - Estutura do componente monolitíco modularizado 
 Este repositório contém um componente Spring Boot modularizado, seguindo uma arquitetura hexagonal, para as funcionalidades de voo (flight), hotel e pedido (order).
