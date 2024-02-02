@@ -7,25 +7,11 @@ Este repositório contém um componente Spring Boot modularizado, seguindo uma a
 
 ![diagram_modular_monolith](https://github.com/murilohenzo/mono-to-micro/assets/28688721/29035d64-7258-4f15-abba-3d426da5f43f)
 
-
-```
-├── modules
-│   ├── travel-application
-│   │   └── adapters
-│   ├── flight
-│   │   ├── domain
-│   │   └── infrastructure
-│   ├── hotel
-│   │   ├── domain
-│   │   └── infrastructure
-│   └── order
-│       ├── domain
-│       └── infrastructure
-```
-
 ## Detalhes da Arquitetura Hexagonal
 
 O padrão arquitetônico hexagonal (ou porta e adaptador) é utilizado para desacoplar a lógica de negócios da infraestrutura externa. A ideia é que o núcleo da aplicação (domínio) não dependa de detalhes externos, permitindo a fácil substituição de adaptadores e a reutilização de lógica de negócios.
+
+![hexagonal_architecture](https://github.com/murilohenzo/mono-to-micro/assets/28688721/467e9210-2584-4204-96e0-f4d8a36e9e78)
 
 ### Componentes:
 
