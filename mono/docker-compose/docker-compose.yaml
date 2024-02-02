@@ -4,5 +4,8 @@ services:
   database:
     container_name: mysql_db
     restart: always
+    build:
+      dockerfile: Dockerfile
+      context: . .
     ports:
       - "3306:3306"

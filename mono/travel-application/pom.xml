@@ -8,6 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.murilohenzo</groupId>
     <artifactId>travel-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -59,33 +60,30 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>3.1.0</version>
+                <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>deploy-artifact</id>
+                        <id>copy-jar</id>
                         <phase>install</phase>
                         <goals>
-                            <goal>run</goal>
+                            <goal>copy</goal>
                         </goals>
                         <configuration>
-                            <target>
-                                <echo>Delete jar in docker</echo>
-                                <delete>
-                                    <fileset dir="../docker" includes="*.jar" />
-                                </delete>
-                                <echo>Mount jar for docker</echo>
-                                <copy todir="../docker">
-                                    <fileset dir="${project.basedir}/target">
-                                        <include name="*.jar"/>
-                                    </fileset>
-                                </copy>
-                            </target>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>../docker</outputDirectory>
+                                    <destFileName>${project.artifactId}.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 

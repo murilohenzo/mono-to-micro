@@ -16,11 +16,7 @@
 	<description>monolithic application to microservices</description>
 	<packaging>pom</packaging>
 
-	<!-- Configuração para ignorar empacotamento dos módulos de domínio -->
 	<properties>
-		<skip.module.flight-booking>true</skip.module.flight-booking>
-		<skip.module.hotel-booking>true</skip.module.hotel-booking>
-		<skip.module.order-management>true</skip.module.order-management>
 		<java.version>21</java.version>
 	</properties>
 
