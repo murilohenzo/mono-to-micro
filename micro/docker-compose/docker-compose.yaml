@@ -1,0 +1,47 @@
+version: '3.3'
+
+services:
+  db_flight_booking:
+    image: mysql:8-debian
+    container_name: mysql_db_flight_booking
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: db_flight_booking
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_PORT: 3306
+    volumes:
+      - ./data:/var/lib/db_flight_booking
+
+  db_hotel_booking:
+    image: mysql:8-debian
+    container_name: mysql_db_hotel_booking
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: db_hotel_booking
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_PORT: 3306
+    volumes:
+      - ./data:/var/lib/db_hotel_booking
+
+  db_order_management:
+    image: mysql:8-debian
+    container_name: mysql_db_order_management
+    restart: always
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_DATABASE: db_order_management
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_PORT: 3306
+    volumes:
+      - ./data:/var/lib/db_order_management

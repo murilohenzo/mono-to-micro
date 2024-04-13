@@ -1,0 +1,58 @@
+spring:
+  application: travel-app
+  main:
+    banner-mode: "off"
+    allow-bean-definition-overriding: true
+  beaninfo:
+    ignore: true
+  jpa:
+    show-sql: false
+    open-in-view: false
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        generate-ddl: true
+        format-sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3307/db_hotel_booking?useTimezone=true&serverTimezone=America/Sao_Paulo
+    username: mysql
+    password: mysql
+    driverClassName: com.mysql.cj.jdbc.Driver
+server:
+  port: 8085
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+  error:
+    whitelabel:
+      enabled: false
+management:
+  server:
+    port: 9095
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, prometheus, mappings
+---
+spring:
+  config:
+    activate:
+      on-profile: des
+---
+spring:
+  config:
+    activate:
+      on-profile: hml
+---
+spring:
+  config:
+    activate:
+      on-profile: prd
